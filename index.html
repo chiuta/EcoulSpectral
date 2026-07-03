@@ -881,6 +881,7 @@ const state = {
 let dpr = window.devicePixelRatio||1;
 const SUPPORTED_LANGS = ['ro','en','fr','it','es','pt','de'];
 let TOUR_STEPS = I18N_DATA.ro.tour;
+let tourIndex = 0;
 
 /* ============================== DOM ============================== */
 const els = {};
@@ -1722,10 +1723,12 @@ function applySettings(){
   if (s.noiseIntensity){ els.noiseIntensitySlider.value=s.noiseIntensity; els.noiseIntensityVal.textContent=parseFloat(s.noiseIntensity).toFixed(1); }
   if (s.noiseComplete!=null) els.noiseCompleteToggle.checked = !!s.noiseComplete;
   if (s.speed){ state.playbackRate = parseFloat(s.speed)||1; els.speedSelect.value = String(state.playbackRate); }
-  if (s.lang) applyLanguage(s.lang);
+  if (s.lang && SUPPORTED_LANGS.indexOf(s.lang)>=0) state.lang = s.lang;
 }
 const debouncedSaveSettings = debounce(saveSettings, 400);
 applySettings();
+applyLanguage(state.lang); // neconditionat — garanteaza ca renderManual/renderShortcuts (si tot ce mai
+                           // face applyLanguage) ruleaza macar o data, chiar la prima vizita fara nimic salvat
 els.langSelect.value = state.lang;
 els.speedSelect.addEventListener('change', ()=>{ state.playbackRate = parseFloat(els.speedSelect.value)||1; debouncedSaveSettings(); });
 els.langSelect.addEventListener('change', ()=>{ applyLanguage(els.langSelect.value); });
@@ -1736,7 +1739,6 @@ function t(key){
   if (typeof entry === 'function') return entry.apply(null, Array.prototype.slice.call(arguments,1));
   return entry;
 }
-let tourIndex = 0;
 let helpTriggerEl = null;
 
 function isVisible(el){
