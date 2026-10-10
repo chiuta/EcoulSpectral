@@ -40,6 +40,10 @@ Ecoul Spectral este un editor de spectrogramă care rulează local în browser. 
 - **Stocare locală:** `localStorage`, cheia `ecoulSpectral.settings.v1` (praguri, intensitate zgomot, limbă, viteză de redare). Fișierele audio nu sunt salvate.
 - Linkurile din subsol (Patreon, Buy Me a Coffee, trade-free.org, chiuta.github.io) se deschid doar la click. Etichetele Open Graph din cod indică `chiuta.github.io`, fără efect la rulare.
 
+## Limitări
+
+Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă, nu o separare automată perfectă: detecția de voce se bazează pe periodicitate armonică și poate confunda alte sunete armonice cu vocea, iar pe un mix muzical complex rezultatul poate conține artefacte. Eșantionul `esantion-muzica-voce.wav` din repository este un fișier de probă, nelegat din aplicație.
+
 ## Rulare locală / offline
 
 Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decodarea formatelor depinde de codecurile browserului.
@@ -55,3 +59,5 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 ## English summary
 
 Ecoul Spectral is a single-file, in-browser spectrogram editor: select a time-frequency region and isolate or remove it, detect or remove voice (harmonic product spectrum), reduce noise (spectral subtraction), then export WAV. It uses classic DSP, not a trained AI model. Audio never leaves the browser; only settings are kept in localStorage. 7 UI languages. License not yet declared.
+
+Audit: 2026-10-10 — verificat codul (fără apeluri de rețea), accesibilitatea (axe: contrast corectat) și funcționarea (încărcare WAV, izolare selecție, izolare voce).
