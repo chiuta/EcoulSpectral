@@ -20,7 +20,7 @@ Ecoul Spectral este un editor de spectrogramă care rulează local în browser. 
 - Anulare/refacere (↩ / ↪), loop pe selecție, viteză de redare (0.5× – 2×), marcaje („+ marcaj la poziția curentă”).
 - „Evenimente automate”, cu componente Mid (centru) / Side (lateral) și „exportă toate evenimentele”.
 - „Voce automată”: „Izolează vocea” / „Elimină vocea” pe tot clipul, cu prag reglabil.
-- „Zgomot de fond”: profil din selecție, automat (fără voce) sau din cea mai liniștită porțiune; „Reduce zgomotul (tot clipul)” cu intensitate reglabilă.
+- „Zgomot de fond”: profil din selecție, automat (fără voce) sau din cea mai liniștită porțiune; „Reduce zgomotul (tot clipul)” cu intensitate reglabilă. Butonul este activ imediat după încărcare: dacă nu ai setat un profil, alege automat unul (porțiuni fără voce, altfel cea mai liniștită porțiune) și îl afișează în stare. Secțiunile „Voce automată” și „Zgomot de fond” se deschid la prima încărcare.
 - Comparare A/B, „▶ rezultat”, „↻ folosește ca sursă nouă”, descărcare WAV.
 - Ghid integrat: „Tur ghidat”, „Manual”, „Scurtături”.
 - „Încearcă un semnal de test”: pe ecranul inițial, încarcă un semnal sintetic de 8 s generat în browser (voce armonică cu formanți, două bipuri de 2,4 kHz și zgomot de fond), ca să încerci selecția, „Izolează vocea” și reducerea zgomotului fără un fișier propriu. La prima încărcare din sesiune se deschide secțiunea „Voce automată”.
@@ -58,6 +58,9 @@ Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă,
 Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decodarea formatelor depinde de codecurile browserului.
 
 ## Istoric / Changelog
+
+### 11.10.2026 (a treia actualizare) — 11 octombrie 2026
+- Corectat: butoanele de reducere a zgomotului nu puteau fi apăsate fără pași suplimentari (secțiunea era închisă, iar „Reduce zgomotul” rămânea dezactivat până la setarea unui profil). Acum secțiunea se deschide la prima încărcare, butonul e activ, iar lipsa profilului se rezolvă automat (mesajul de stare, tradus în cele 7 limbi, o spune).
 
 ### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
 - Ecran inițial: butonul „Încearcă un semnal de test” (semnal sintetic generat local; textele în toate cele 7 limbi). Secțiunea „Voce automată” se deschide la prima încărcare.
