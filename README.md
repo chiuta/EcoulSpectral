@@ -4,6 +4,8 @@ Separă un sunet de o voce, chirurgical, direct în browser — editor spectral 
 
 **Live:** https://chiuta.github.io/EcoulSpectral/
 
+Ultima actualizare: 11 octombrie 2026
+
 ![Captura de ecran](screenshot.png)
 
 ## Ce este
@@ -47,6 +49,12 @@ Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă,
 ## Rulare locală / offline
 
 Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decodarea formatelor depinde de codecurile browserului.
+
+## Istoric / Changelog
+
+### 11.10.2026 — 11 octombrie 2026
+- Accesibilitate: titlu h1 (wordmark), zonă principală (main) în jurul zonei de încărcare/spațiului de lucru; verificare axe fără încălcări la 1280 și 360 px.
+- Adăugat Content-Security-Policy strict (script cu hash; fără conexiuni de rețea, doar blob:/data:).
 
 ## Licență
 

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-eTUFoqqvn9yD1gTk7Pgn5NO6LoVR2eqJnLCjIdUqrC8='; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: data:; connect-src blob: data:; worker-src blob:; base-uri 'none'; form-action 'none'">
 <title>Ecoul Spectral</title>
 
 <meta name="description" content="Separă un sunet de o voce, chirurgical, direct în browser — gratuit, offline, fără cont. / Surgically separate a sound from a voice — free, offline, no account.">
@@ -79,7 +80,7 @@ button:focus-visible, .btn:focus-visible, input:focus-visible, a:focus-visible{
 
 /* ---------- header ---------- */
 .topbar{border-bottom:1px solid var(--border-soft); padding-bottom:18px; margin-bottom:22px; display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:10px;}
-.wordmark{font-family:var(--mono); font-weight:700; font-size:19px; letter-spacing:.14em; text-transform:uppercase;}
+.wordmark{margin:0; font-family:var(--mono); font-weight:700; font-size:19px; letter-spacing:.14em; text-transform:uppercase;}
 .wordmark .dot{color:var(--amber);}
 .tagline{font-size:12.5px; color:var(--text-faint); margin-top:4px;}
 .brand-col{display:flex; flex-direction:column;}
@@ -263,7 +264,7 @@ button:focus-visible, .btn:focus-visible, input:focus-visible, a:focus-visible{
 
   <header class="topbar">
     <div class="brand-col">
-      <div class="wordmark">ECOUL<span class="dot">·</span>SPECTRAL</div>
+      <h1 class="wordmark">ECOUL<span class="dot">·</span>SPECTRAL</h1>
       <div class="tagline" data-i18n="tagline">separă un sunet de o voce, chirurgical, direct în browser</div>
     </div>
     <select id="langSelect" class="lang-select" aria-label="Limbă / Language">
@@ -279,6 +280,7 @@ button:focus-visible, .btn:focus-visible, input:focus-visible, a:focus-visible{
     <div class="fileinfo" id="fileinfo" hidden></div>
   </header>
 
+  <main id="main">
   <section id="dropzoneSection">
     <input type="file" id="fileInput" accept="audio/*,video/*" class="visually-hidden">
     <label for="fileInput" class="dropzone-inner" id="dropzoneInner">
@@ -418,6 +420,8 @@ button:focus-visible, .btn:focus-visible, input:focus-visible, a:focus-visible{
     <p data-i18n-html="aboutP2"><b>Detecția de voce</b> folosește Harmonic Product Spectrum — caută o fundamentală (70–400Hz) cu o serie reală de armonice deasupra (nu doar un ton izolat: verifică explicit că armonicele au energie proprie, nu doar scurgere spectrală). Nu recunoaște conținut sau identitate, doar periodicitate acustică armonică în acel interval — un instrument sau alt sunet cu structură armonică reală în aceeași bandă poate fi marcat și el, la fel cum ar fi și pentru o ureche care judecă doar înălțimea, nu sursa. „Izolează/Elimină vocea” taie pe toată banda de frecvență în regiunile marcate — dacă evenimentul se suprapune exact peste voce, tot selecția manuală pe spectrogramă separă chirurgical, nu asta.</p>
     <p data-i18n-html="aboutP3"><b>Reducerea de zgomot</b> e scădere spectrală clasică (stil Audacity Noise Reduction): estimează amprenta de magnitudine a zgomotului dintr-o porțiune „doar zgomot" și o scade din tot clipul, păstrând faza originală. Funcționează bine pe zgomot constant (fâsâit, hum, ventilator); intensitate prea mare poate lăsa artefacte („zgomot muzical" — pocnete izolate de frecvență), de-asta pragul e reglabil, iar „eliminare completă" (fără prag minim de siguranță) e o alegere explicită, nu implicită. Dacă fișierul video nu se decodează direct, extrage întâi coloana audio: <code>ffmpeg -i clip.mp4 -vn -acodec pcm_s16le -ar 44100 audio.wav</code></p>
   </div>
+
+  </main>
 
   <footer class="app-footer">
     <div class="trade-free-badge">
