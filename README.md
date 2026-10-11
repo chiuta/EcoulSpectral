@@ -23,6 +23,7 @@ Ecoul Spectral este un editor de spectrogramă care rulează local în browser. 
 - „Zgomot de fond”: profil din selecție, automat (fără voce) sau din cea mai liniștită porțiune; „Reduce zgomotul (tot clipul)” cu intensitate reglabilă.
 - Comparare A/B, „▶ rezultat”, „↻ folosește ca sursă nouă”, descărcare WAV.
 - Ghid integrat: „Tur ghidat”, „Manual”, „Scurtături”.
+- „Încearcă un semnal de test”: pe ecranul inițial, încarcă un semnal sintetic de 8 s generat în browser (voce armonică cu formanți, două bipuri de 2,4 kHz și zgomot de fond), ca să încerci selecția, „Izolează vocea” și reducerea zgomotului fără un fișier propriu. La prima încărcare din sesiune se deschide secțiunea „Voce automată”.
 - Interfață în 7 limbi: RO, EN, FR, IT, ES, PT, DE.
 
 ## Manual de utilizare
@@ -42,6 +43,12 @@ Ecoul Spectral este un editor de spectrogramă care rulează local în browser. 
 - **Stocare locală:** `localStorage`, cheia `ecoulSpectral.settings.v1` (praguri, intensitate zgomot, limbă, viteză de redare). Fișierele audio nu sunt salvate.
 - Linkurile din subsol (Patreon, Buy Me a Coffee, trade-free.org, chiuta.github.io) se deschid doar la click. Etichetele Open Graph din cod indică `chiuta.github.io`, fără efect la rulare.
 
+## Cerințe tehnice și limite
+
+- Browser modern cu Web Audio (`AudioContext`) și canvas; decodarea formatelor depinde de codecurile browserului.
+- Analiza folosește STFT cu fereastră de 2048 de eșantioane și pas de 512; fișierele mai lungi de 10 minute cer confirmare înainte de încărcare, iar prelucrarea lor poate dura și consuma multă memorie.
+- Exportul este WAV PCM pe 16 biți, cu frecvența de eșantionare a sursei (mono sau stereo).
+
 ## Limitări
 
 Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă, nu o separare automată perfectă: detecția de voce se bazează pe periodicitate armonică și poate confunda alte sunete armonice cu vocea, iar pe un mix muzical complex rezultatul poate conține artefacte. Eșantionul `esantion-muzica-voce.wav` din repository este un fișier de probă, nelegat din aplicație. Proveniența și drepturile asupra acestui eșantion nu sunt documentate în repository (nelegat din aplicație; de confirmat de autor sau de eliminat). Sloganul „chirurgical” (din meta description, Open Graph și tagline) este păstrat ca expresie a autorului; semnificația lui este cea de mai sus, iar editorul nu garantează o separare perfectă a unei voci dintr-un mix complex.
@@ -51,6 +58,10 @@ Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă,
 Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decodarea formatelor depinde de codecurile browserului.
 
 ## Istoric / Changelog
+
+### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
+- Ecran inițial: butonul „Încearcă un semnal de test” (semnal sintetic generat local; textele în toate cele 7 limbi). Secțiunea „Voce automată” se deschide la prima încărcare.
+- Documentare: secțiune nouă „Cerințe tehnice și limite”.
 
 ### 11.10.2026 — 11 octombrie 2026
 - Accesibilitate: titlu h1 (wordmark), zonă principală (main) în jurul zonei de încărcare/spațiului de lucru; verificare axe fără încălcări la 1280 și 360 px.
