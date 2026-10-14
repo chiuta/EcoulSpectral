@@ -1,6 +1,6 @@
 # Ecoul Spectral
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
 
 Separă un sunet de o voce, chirurgical, direct în browser — editor spectral pe un singur fișier HTML.
 
@@ -58,6 +58,9 @@ Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă,
 Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decodarea formatelor depinde de codecurile browserului.
 
 ## Istoric / Changelog
+
+### 1.1.0 — 2026-10-14
+- Copie de rezervă și etichetare date (fff-kit).
 
 ### 1.0.0 — 12 octombrie 2026
 - Versiunea și data ultimei actualizări sunt afișate în aplicație (subsol).

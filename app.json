@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "slug": "ecoulspectral",
+  "name": "Ecoul Spectral",
+  "version": "1.1.0",
+  "updated": "2026-10-14",
+  "description": "Separă un sunet de o voce, chirurgical, direct în browser — gratuit, offline, fără cont. / Surgically separate a sound from a voice — free, offline, no account.",
+  "egress": [],
+  "permissions": [
+    "serviceWorker",
+    "localStorage"
+  ],
+  "storageKeys": [],
+  "sizeBytes": 408978,
+  "sha256": "54a734f62298593fe0290f1713eb4aecef9ea1acf9eb46b8d03622a3a4abf37c",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'none'",
+      "script-src": "sha256×3",
+      "style-src": "'unsafe-inline'",
+      "img-src": "'self' data: blob:",
+      "media-src": "blob: data:",
+      "connect-src": "blob: data:",
+      "worker-src": "'self' blob:",
+      "base-uri": "'none'",
+      "form-action": "'none'",
+      "manifest-src": "'self'"
+    },
+    "scriptInline": "hash",
+    "connect": "blob: data:"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [
+      "ro",
+      "en",
+      "fr",
+      "it",
+      "es",
+      "pt",
+      "de"
+    ],
+    "pwa": {
+      "manifest": true,
+      "serviceWorker": true
+    },
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "kit": {
+    "version": "1.0.0",
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "selfSerializing": false
+}
