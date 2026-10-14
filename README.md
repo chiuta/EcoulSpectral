@@ -78,7 +78,7 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decoda
 
 ## Licență
 
-Licența nu este încă declarată explicit în acest repository; vezi nota din aplicație. Aplicația se descrie ca „trade-free: fără reclame, fără colectare de date, fără cont necesar, fără funcții blocate după plată”.
+CC0 1.0 Universal (domeniu public) pentru codul și structura aplicației — vezi fișierul `LICENSE`. Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii. Fișierul de probă `esantion-muzica-voce.wav` nu face parte din această dedicare; drepturile asupra lui rămân rezervate până la o declarație separată.
 
 ## Autor
 
