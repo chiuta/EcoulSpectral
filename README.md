@@ -78,7 +78,7 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decoda
 
 ## Licență
 
-CC0 1.0 Universal (domeniu public) pentru codul și structura aplicației — vezi fișierul `LICENSE`. Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii. Fișierul de probă `esantion-muzica-voce.wav` nu face parte din această dedicare; drepturile asupra lui rămân rezervate până la o declarație separată.
+MIT pentru codul și structura aplicației — vezi fișierul `LICENSE`. Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii. Fișierul de probă `esantion-muzica-voce.wav` nu face parte din această dedicare; drepturile asupra lui rămân rezervate până la o declarație separată.
 
 ## Autor
 
@@ -86,6 +86,6 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## English summary
 
-Ecoul Spectral is a single-file, in-browser spectrogram editor: select a time-frequency region and isolate or remove it, detect or remove voice (harmonic product spectrum), reduce noise (spectral subtraction), then export WAV. It uses classic DSP, not a trained AI model. Audio never leaves the browser; only settings are kept in localStorage. 7 UI languages. License not yet declared.
+Ecoul Spectral is a single-file, in-browser spectrogram editor: select a time-frequency region and isolate or remove it, detect or remove voice (harmonic product spectrum), reduce noise (spectral subtraction), then export WAV. It uses classic DSP, not a trained AI model. Audio never leaves the browser; only settings are kept in localStorage. 7 UI languages. License: MIT.
 
 Audit: 2026-10-10 (rundă 2, 2026-10-11: slogan și eșantion .wav doar documentate, fără modificări în aplicație) — verificat codul (fără apeluri de rețea), accesibilitatea (axe: contrast corectat) și funcționarea (încărcare WAV, izolare selecție, izolare voce).
