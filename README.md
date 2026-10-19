@@ -1,91 +1,91 @@
 # Ecoul Spectral
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Separă un sunet de o voce, chirurgical, direct în browser — editor spectral pe un singur fișier HTML.
+**Version:** 1.1.0 · **Last updated:** 2026-10-14
 
-**Live:** https://chiuta.github.io/EcoulSpectral/
+Separate a sound from a voice, surgically, right in the browser — a spectral editor in a single HTML file.
 
-![Captura de ecran](screenshot.png)
+**Live app:** https://chiuta.github.io/EcoulSpectral/
 
-## Ce este
+![Screenshot](screenshot.png)
 
-Ecoul Spectral este un editor de spectrogramă care rulează local în browser. Încarci un fișier audio sau video, marchezi pe spectrogramă o regiune timp–frecvență, apoi o izolezi sau o elimini. Include detecție automată de voce, reducere de zgomot și export WAV. Conform manualului din aplicație, nu este un model AI antrenat: folosește transformata Fourier pe termen scurt (STFT), detecție de periodicitate (Harmonic Product Spectrum) și scădere spectrală clasică; nu înlocuiește separarea voce/instrumental pe un mix muzical complex.
+## What it is
 
-## Funcții
+Ecoul Spectral is a spectrogram editor that runs locally in the browser. You load an audio or video file, mark a time–frequency region on the spectrogram, then isolate or remove it. It includes automatic voice detection, noise reduction and WAV export. According to the manual in the app, it is not a trained AI model: it uses the short-time Fourier transform (STFT), periodicity detection (Harmonic Product Spectrum) and classic spectral subtraction; it does not replace voice/instrumental separation on a complex music mix.
 
-- Încărcare prin drag-and-drop sau „alege un fișier” (audio sau video; dacă video-ul nu se decodează, aplicația afișează o comandă ffmpeg pentru extragerea audio).
-- Spectrogramă și formă de undă, minimap pentru tot fișierul, zoom cu rotița, selecție prin tragere, margini ajustabile, câmpuri precise `t0`, `t1`, `f0`, `f1`.
-- „Izolează selecția” / „Elimină selecția”, „Decupează la selecție”, „Fondu intrare/ieșire”, „Normalizează”, „Inversează”.
-- Anulare/refacere (↩ / ↪), loop pe selecție, viteză de redare (0.5× – 2×), marcaje („+ marcaj la poziția curentă”).
-- „Evenimente automate”, cu componente Mid (centru) / Side (lateral) și „exportă toate evenimentele”.
-- „Voce automată”: „Izolează vocea” / „Elimină vocea” pe tot clipul, cu prag reglabil.
-- „Zgomot de fond”: profil din selecție, automat (fără voce) sau din cea mai liniștită porțiune; „Reduce zgomotul (tot clipul)” cu intensitate reglabilă. Butonul este activ imediat după încărcare: dacă nu ai setat un profil, alege automat unul (porțiuni fără voce, altfel cea mai liniștită porțiune) și îl afișează în stare. Secțiunile „Voce automată” și „Zgomot de fond” se deschid la prima încărcare.
-- Comparare A/B, „▶ rezultat”, „↻ folosește ca sursă nouă”, descărcare WAV.
-- Ghid integrat: „Tur ghidat”, „Manual”, „Scurtături”.
-- „Încearcă un semnal de test”: pe ecranul inițial, încarcă un semnal sintetic de 8 s generat în browser (voce armonică cu formanți, două bipuri de 2,4 kHz și zgomot de fond), ca să încerci selecția, „Izolează vocea” și reducerea zgomotului fără un fișier propriu. La prima încărcare din sesiune se deschide secțiunea „Voce automată”.
-- Interfață în 7 limbi: RO, EN, FR, IT, ES, PT, DE.
+## Features
 
-## Manual de utilizare
+- Loading by drag-and-drop or "choose a file" (audio or video; if the video cannot be decoded, the app shows an ffmpeg command for extracting the audio).
+- Spectrogram and waveform, minimap for the whole file, zoom with the wheel, selection by dragging, adjustable edges, precise fields `t0`, `t1`, `f0`, `f1`.
+- "Isolate selection" / "Remove selection", "Trim to selection", "Fade in/out", "Normalize", "Invert".
+- Undo/redo (↩ / ↪), loop on the selection, playback speed (0.5× – 2×), markers ("+ marker at current position").
+- "Automatic events", with Mid (centre) / Side (lateral) components and "export all events".
+- "Automatic voice": "Isolate voice" / "Remove voice" over the whole clip, with an adjustable threshold.
+- "Background noise": profile from the selection, automatic (without voice) or from the quietest portion; "Reduce noise (whole clip)" with adjustable intensity. The button is active immediately after loading: if you have not set a profile, it automatically picks one (portions without voice, otherwise the quietest portion) and shows it in the status. The "Automatic voice" and "Background noise" sections open on first load.
+- A/B comparison, "▶ result", "↻ use as new source", WAV download.
+- Built-in guide: "Guided tour", "Manual", "Shortcuts".
+- "Try a test signal": on the initial screen, it loads an 8 s synthetic signal generated in the browser (a harmonic voice with formants, two 2.4 kHz beeps and background noise), so you can try the selection, "Isolate voice" and noise reduction without a file of your own. On the first load in a session the "Automatic voice" section opens.
+- Interface in 7 languages: RO, EN, FR, IT, ES, PT, DE.
 
-1. Alege limba (RO / EN / FR / IT / ES / PT / DE).
-2. Trage fișierul audio/video pe pagină sau apasă „alege un fișier”.
-3. Trage cu mouse-ul pe spectrogramă pentru a marca o regiune; ajustează-i marginile sau scrie valorile în t0/t1/f0/f1 și apasă „Setează selecția”.
-4. Apasă „Izolează selecția” (păstrezi doar regiunea) sau „Elimină selecția” (o ștergi). Ascultă cu „▶ rezultat” și compară cu „⇄ A/B”.
-5. Pentru voce sau zgomot, deschide secțiunile „Voce automată” / „Zgomot de fond” și alege profilul de zgomot înainte de „Reduce zgomotul”.
-6. Dacă vrei să continui editarea pe rezultat, apasă „↻ folosește ca sursă nouă”.
-7. Descarcă rezultatul cu „⤓ descarcă WAV”.
-8. Scurtături (când nu e focalizat un slider sau o casetă): **Spațiu** redă/oprește, **L** buclă pe selecție, **B** marcaj, **U** anulează, **R** refă, **← →** deplasează selecția (spectrograma focalizată), dublu-click sare la moment, **?** deschide ghidul, **Esc** îl închide.
+## User guide
 
-## Confidențialitate și rețea
+1. Choose the language (RO / EN / FR / IT / ES / PT / DE).
+2. Drag the audio/video file onto the page or press "choose a file".
+3. Drag with the mouse on the spectrogram to mark a region; adjust its edges or type the values into t0/t1/f0/f1 and press "Set selection".
+4. Press "Isolate selection" (you keep only the region) or "Remove selection" (you delete it). Listen with "▶ result" and compare with "⇄ A/B".
+5. For voice or noise, open the "Automatic voice" / "Background noise" sections and choose the noise profile before "Reduce noise".
+6. If you want to keep editing on the result, press "↻ use as new source".
+7. Download the result with "⤓ download WAV".
+8. Shortcuts (when no slider or box is focused): **Space** plays/stops, **L** loop on the selection, **B** marker, **U** undo, **R** redo, **← →** move the selection (focused spectrogram), double-click jumps to the moment, **?** opens the guide, **Esc** closes it.
 
-- Procesarea audio se face local; fișierul nu este încărcat pe niciun server. Nu am găsit în cod apeluri `fetch`/XHR sau resurse externe încărcate automat.
-- **Stocare locală:** `localStorage`, cheia `ecoulSpectral.settings.v1` (praguri, intensitate zgomot, limbă, viteză de redare). Fișierele audio nu sunt salvate.
-- Linkurile din subsol (Buy Me a Coffee, trade-free.org, chiuta.github.io) se deschid doar la click. Etichetele Open Graph din cod indică `chiuta.github.io`, fără efect la rulare.
+## Privacy and network
 
-## Cerințe tehnice și limite
+- Audio processing is done locally; the file is not uploaded to any server. I found no `fetch`/XHR calls or automatically loaded external resources in the code.
+- **Local storage:** `localStorage`, key `ecoulSpectral.settings.v1` (thresholds, noise intensity, language, playback speed). Audio files are not saved.
+- The links in the footer (Buy Me a Coffee, trade-free.org, chiuta.github.io) open only on click. The Open Graph tags in the code point to `chiuta.github.io`, with no effect at runtime.
 
-- Browser modern cu Web Audio (`AudioContext`) și canvas; decodarea formatelor depinde de codecurile browserului.
-- Analiza folosește STFT cu fereastră de 2048 de eșantioane și pas de 512; fișierele mai lungi de 10 minute cer confirmare înainte de încărcare, iar prelucrarea lor poate dura și consuma multă memorie.
-- Exportul este WAV PCM pe 16 biți, cu frecvența de eșantionare a sursei (mono sau stereo).
+## Technical requirements and limits
 
-## Limitări
+- A modern browser with Web Audio (`AudioContext`) and canvas; decoding of formats depends on the browser's codecs.
+- The analysis uses an STFT with a window of 2048 samples and a hop of 512; files longer than 10 minutes require confirmation before loading, and processing them can take a long time and use a lot of memory.
+- The export is 16-bit PCM WAV, at the source's sample rate (mono or stereo).
 
-Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă, nu o separare automată perfectă: detecția de voce se bazează pe periodicitate armonică și poate confunda alte sunete armonice cu vocea, iar pe un mix muzical complex rezultatul poate conține artefacte. Eșantionul `esantion-muzica-voce.wav` din repository este un fișier de probă, nelegat din aplicație. Proveniența și drepturile asupra acestui eșantion nu sunt documentate în repository (nelegat din aplicație; de confirmat de autor sau de eliminat). Sloganul „chirurgical” (din meta description, Open Graph și tagline) este păstrat ca expresie a autorului; semnificația lui este cea de mai sus, iar editorul nu garantează o separare perfectă a unei voci dintr-un mix complex.
+## Limitations
 
-## Rulare locală / offline
+The slogan "surgical" describes the precision of manual selection on the spectrogram, not a perfect automatic separation: voice detection is based on harmonic periodicity and can confuse other harmonic sounds with voice, and on a complex music mix the result may contain artefacts. The sample `esantion-muzica-voce.wav` in the repository is a test file, not linked from the app. The provenance and rights to this sample are not documented in the repository (not linked from the app; to be confirmed by the author or removed). The slogan "surgical" (from the meta description, Open Graph and tagline) is kept as the author's expression; its meaning is the one above, and the editor does not guarantee a perfect separation of a voice from a complex mix.
 
-Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decodarea formatelor depinde de codecurile browserului.
+## Running locally / offline
 
-## Istoric / Changelog
+Download `index.html` and open it in a browser; it does not require internet. Decoding of formats depends on the browser's codecs.
+
+## History / Changelog
 
 ### 1.1.0 — 2026-10-14
-- Copie de rezervă și etichetare date (fff-kit).
+- Backup and data labelling (fff-kit).
 
-### 1.0.0 — 12 octombrie 2026
-- Versiunea și data ultimei actualizări sunt afișate în aplicație (subsol).
+### 1.0.0 — 12 October 2026
+- The version and the date of the last update are shown in the app (footer).
 
-### 11.10.2026 (a treia actualizare) — 11 octombrie 2026
-- Corectat: butoanele de reducere a zgomotului nu puteau fi apăsate fără pași suplimentari (secțiunea era închisă, iar „Reduce zgomotul” rămânea dezactivat până la setarea unui profil). Acum secțiunea se deschide la prima încărcare, butonul e activ, iar lipsa profilului se rezolvă automat (mesajul de stare, tradus în cele 7 limbi, o spune).
+### 11.10.2026 (third update) — 11 October 2026
+- Fixed: the noise-reduction buttons could not be pressed without extra steps (the section was closed, and "Reduce noise" stayed disabled until a profile was set). Now the section opens on first load, the button is active, and the missing profile is resolved automatically (the status message, translated into the 7 languages, says so).
 
-### 11.10.2026 (a doua actualizare) — 11 octombrie 2026
-- Ecran inițial: butonul „Încearcă un semnal de test” (semnal sintetic generat local; textele în toate cele 7 limbi). Secțiunea „Voce automată” se deschide la prima încărcare.
-- Documentare: secțiune nouă „Cerințe tehnice și limite”.
+### 11.10.2026 (second update) — 11 October 2026
+- Initial screen: the "Try a test signal" button (synthetic signal generated locally; texts in all 7 languages). The "Automatic voice" section opens on first load.
+- Documentation: new section "Technical requirements and limits".
 
-### 11.10.2026 — 11 octombrie 2026
-- Accesibilitate: titlu h1 (wordmark), zonă principală (main) în jurul zonei de încărcare/spațiului de lucru; verificare axe fără încălcări la 1280 și 360 px.
-- Adăugat Content-Security-Policy strict (script cu hash; fără conexiuni de rețea, doar blob:/data:).
+### 11.10.2026 — 11 October 2026
+- Accessibility: h1 heading (wordmark), main area (main) around the loading area/workspace; axe check without violations at 1280 and 360 px.
+- Added a strict Content-Security-Policy (script with a hash; no network connections, only blob:/data:).
 
-## Licență
+## License
 
-MIT pentru codul și structura aplicației — vezi fișierul `LICENSE`. Eventualele biblioteci terțe incluse în fișier își păstrează licențele proprii. Fișierul de probă `esantion-muzica-voce.wav` nu face parte din această dedicare; drepturile asupra lui rămân rezervate până la o declarație separată.
+MIT for the app's code and structure — see the `LICENSE` file. Any third-party libraries included in the file keep their own licenses. The sample file `esantion-muzica-voce.wav` is not part of this dedication; the rights to it remain reserved until a separate declaration.
 
-## Autor
+## Author
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
-## English summary
+## Audit
 
-Ecoul Spectral is a single-file, in-browser spectrogram editor: select a time-frequency region and isolate or remove it, detect or remove voice (harmonic product spectrum), reduce noise (spectral subtraction), then export WAV. It uses classic DSP, not a trained AI model. Audio never leaves the browser; only settings are kept in localStorage. 7 UI languages. License: MIT.
-
-Audit: 2026-10-10 (rundă 2, 2026-10-11: slogan și eșantion .wav doar documentate, fără modificări în aplicație) — verificat codul (fără apeluri de rețea), accesibilitatea (axe: contrast corectat) și funcționarea (încărcare WAV, izolare selecție, izolare voce).
+2026-10-10 (round 2, 2026-10-11: slogan and .wav sample only documented, no changes in the app) — checked the code (no network calls), accessibility (axe: contrast corrected) and operation (WAV loading, selection isolation, voice isolation).
