@@ -10,7 +10,7 @@ Separa un suono da una voce, con precisione chirurgica, direttamente nel browser
 
 **Applicazione online:** https://chiuta.github.io/EcoulSpectral/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

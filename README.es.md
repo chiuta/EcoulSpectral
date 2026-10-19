@@ -10,7 +10,7 @@ Separa un sonido de una voz, con precisión quirúrgica, directamente en el nave
 
 **Aplicación en línea:** https://chiuta.github.io/EcoulSpectral/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 

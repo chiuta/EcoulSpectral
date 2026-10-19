@@ -10,7 +10,7 @@ Válassz el egy hangot egy hangtól, sebészi pontossággal, közvetlenül a bö
 
 **Online alkalmazás:** https://chiuta.github.io/EcoulSpectral/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

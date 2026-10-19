@@ -10,7 +10,7 @@ Trenne einen Klang von einer Stimme, chirurgisch genau, direkt im Browser — ei
 
 **Online-App:** https://chiuta.github.io/EcoulSpectral/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 

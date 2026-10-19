@@ -10,7 +10,7 @@ Separate a sound from a voice, surgically, right in the browser — a spectral e
 
 **Live app:** https://chiuta.github.io/EcoulSpectral/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

@@ -10,7 +10,7 @@ Separă un sunet de o voce, chirurgical, direct în browser — editor spectral 
 
 **Live:** https://chiuta.github.io/EcoulSpectral/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

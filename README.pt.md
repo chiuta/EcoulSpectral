@@ -10,7 +10,7 @@ Separe um som de uma voz, com precisão cirúrgica, diretamente no navegador —
 
 **Aplicação online:** https://chiuta.github.io/EcoulSpectral/
 
-![Captura de ecrã](screenshot.png)
+![Captura de ecrã](screenshot.pt.png)
 
 ## O que é
 

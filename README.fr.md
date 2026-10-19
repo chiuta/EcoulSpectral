@@ -10,7 +10,7 @@ Séparez un son d'une voix, avec une précision chirurgicale, directement dans l
 
 **Application en ligne :** https://chiuta.github.io/EcoulSpectral/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## Ce que c'est
 
