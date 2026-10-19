@@ -10,9 +10,11 @@
     "serviceWorker",
     "localStorage"
   ],
-  "storageKeys": [],
-  "sizeBytes": 410437,
-  "sha256": "4b7077708405577bd993286b6423428c32b2e9e66fd2faad20a5ef8675fc05fa",
+  "storageKeys": [
+    "ecoulSpectral.settings.v1"
+  ],
+  "sizeBytes": 411100,
+  "sha256": "44af3e4ca2c67f466fff65b3a3247f17ecbd34407dffd334c47958ef7751e38f",
   "csp": {
     "present": true,
     "directives": {
@@ -53,7 +55,7 @@
     ]
   },
   "kit": {
-    "version": "1.0.0",
+    "version": "1.1.1",
     "modules": [
       "core",
       "label",
