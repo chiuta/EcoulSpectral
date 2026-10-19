@@ -88,8 +88,8 @@ MIT pentru codul și structura aplicației — vezi fișierul `LICENSE`. Eventua
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
-## English summary
+## Rezumat
 
-Ecoul Spectral is a single-file, in-browser spectrogram editor: select a time-frequency region and isolate or remove it, detect or remove voice (harmonic product spectrum), reduce noise (spectral subtraction), then export WAV. It uses classic DSP, not a trained AI model. Audio never leaves the browser; only settings are kept in localStorage. 8 UI languages. License: MIT.
+Ecoul Spectral este un editor de spectrograme în browser, într-un singur fișier: selectezi o regiune timp-frecvență și o izolezi sau o elimini, detectezi sau elimini vocea (spectru de produs armonic), reduci zgomotul (scădere spectrală), apoi exporți WAV. Folosește DSP clasic, nu un model AI antrenat. Sunetul nu părăsește niciodată browserul; în localStorage se păstrează doar setările. 8 limbi de interfață. Licență: MIT.
 
 Audit: 2026-10-10 (rundă 2, 2026-10-11: slogan și eșantion .wav doar documentate, fără modificări în aplicație) — verificat codul (fără apeluri de rețea), accesibilitatea (axe: contrast corectat) și funcționarea (încărcare WAV, izolare selecție, izolare voce).
