@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Zuletzt aktualisiert:** 2026-10-14
+**Version:** 1.2.0 · **Zuletzt aktualisiert:** 2026-10-19
+
+Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Trenne einen Klang von einer Stimme, chirurgisch genau, direkt im Browser — ein Spektraleditor in einer einzigen HTML-Datei.
 
@@ -26,11 +28,11 @@ Ecoul Spectral ist ein Spektrogramm-Editor, der lokal im Browser läuft. Du läd
 - A/B-Vergleich, „▶ Ergebnis“, „↻ als neue Quelle verwenden“, WAV-Download.
 - Integrierte Anleitung: „Geführte Tour“, „Handbuch“, „Tastenkürzel“.
 - „Testsignal ausprobieren“: Auf dem Startbildschirm lädt es ein im Browser erzeugtes synthetisches Signal von 8 s (harmonische Stimme mit Formanten, zwei Pieptöne bei 2,4 kHz und Hintergrundrauschen), damit du die Auswahl, „Stimme isolieren“ und die Rauschunterdrückung ohne eigene Datei ausprobieren kannst. Beim ersten Laden in einer Sitzung öffnet sich der Bereich „Automatische Stimme“.
-- Oberfläche in 7 Sprachen: RO, EN, FR, IT, ES, PT, DE.
+- Oberfläche in 8 Sprachen: RO, EN, FR, IT, ES, PT, DE, HU.
 
 ## Bedienungsanleitung
 
-1. Wähle die Sprache (RO / EN / FR / IT / ES / PT / DE).
+1. Wähle die Sprache (RO / EN / FR / IT / ES / PT / DE / HU).
 2. Ziehe die Audio-/Videodatei auf die Seite oder drücke „Datei wählen“.
 3. Ziehe mit der Maus im Spektrogramm, um einen Bereich zu markieren; passe seine Ränder an oder trage die Werte in t0/t1/f0/f1 ein und drücke „Auswahl setzen“.
 4. Drücke „Auswahl isolieren“ (du behältst nur den Bereich) oder „Auswahl entfernen“ (du löschst ihn). Höre mit „▶ Ergebnis“ und vergleiche mit „⇄ A/B“.
@@ -88,6 +90,6 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 
 ## Zusammenfassung auf Englisch
 
-Ecoul Spectral ist ein Spektrogramm-Editor in einer einzigen Datei, im Browser: Wähle einen Zeit-Frequenz-Bereich und isoliere oder entferne ihn, erkenne oder entferne die Stimme (Harmonic Product Spectrum), reduziere Rauschen (spektrale Subtraktion) und exportiere dann als WAV. Er nutzt klassische Signalverarbeitung, kein trainiertes KI-Modell. Das Audio verlässt den Browser nie; nur die Einstellungen werden in localStorage gespeichert. Oberfläche in 7 Sprachen. Lizenz: MIT.
+Ecoul Spectral ist ein Spektrogramm-Editor in einer einzigen Datei, im Browser: Wähle einen Zeit-Frequenz-Bereich und isoliere oder entferne ihn, erkenne oder entferne die Stimme (Harmonic Product Spectrum), reduziere Rauschen (spektrale Subtraktion) und exportiere dann als WAV. Er nutzt klassische Signalverarbeitung, kein trainiertes KI-Modell. Das Audio verlässt den Browser nie; nur die Einstellungen werden in localStorage gespeichert. Oberfläche in 8 Sprachen. Lizenz: MIT.
 
 Audit: 2026-10-10 (Runde 2, 2026-10-11: Slogan und .wav-Beispiel nur dokumentiert, keine Änderungen in der App) — Code geprüft (keine Netzwerkaufrufe), Barrierefreiheit (axe: Kontrast korrigiert) und Funktion (WAV laden, Auswahl isolieren, Stimme isolieren).

@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.1.0 · **Utolsó frissítés:** 2026-10-14
+**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+
+A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Válassz el egy hangot egy hangtól, sebészi pontossággal, közvetlenül a böngészőben — spektrálszerkesztő egyetlen HTML-fájlban.
 
@@ -26,11 +28,11 @@ Az Ecoul Spectral egy spektrogramszerkesztő, amely helyben fut a böngészőben
 - A/B-összehasonlítás, „▶ eredmény”, „↻ használat új forrásként”, WAV-letöltés.
 - Beépített súgó: „Vezetett bemutató”, „Kézikönyv”, „Billentyűparancsok”.
 - „Próbáld ki egy tesztjellel”: a kezdőképernyőn betölt egy 8 másodperces, a böngészőben generált szintetikus jelet (harmonikus hang formánsokkal, két 2,4 kHz-es sípszó és háttérzaj), hogy saját fájl nélkül kipróbálhasd a kijelölést, a „Hang elkülönítése” funkciót és a zajcsökkentést. A munkamenet első betöltésekor az „Automatikus hang” szakasz kinyílik.
-- Felület 7 nyelven: RO, EN, FR, IT, ES, PT, DE.
+- Felület 8 nyelven: RO, EN, FR, IT, ES, PT, DE, HU.
 
 ## Használati útmutató
 
-1. Válaszd ki a nyelvet (RO / EN / FR / IT / ES / PT / DE).
+1. Válaszd ki a nyelvet (RO / EN / FR / IT / ES / PT / DE / HU).
 2. Húzd a hang-/videófájlt az oldalra, vagy nyomd meg a „válassz egy fájlt” gombot.
 3. Húzz az egérrel a spektrogramon egy tartomány megjelöléséhez; állítsd be a széleit, vagy írd be az értékeket a t0/t1/f0/f1 mezőkbe, és nyomd meg a „Kijelölés beállítása” gombot.
 4. Nyomd meg a „Kijelölés elkülönítése” (csak a tartományt tartod meg) vagy a „Kijelölés eltávolítása” (törlöd) gombot. Hallgasd meg a „▶ eredmény” gombbal, és hasonlítsd össze a „⇄ A/B” gombbal.
@@ -88,6 +90,6 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf.
 
 ## Angol nyelvű összefoglaló
 
-Az Ecoul Spectral egyetlen fájlból álló spektrogramszerkesztő a böngészőben: jelölj ki egy idő–frekvencia tartományt, és különítsd el vagy távolítsd el, ismerd fel vagy távolítsd el az emberi hangot (harmonic product spectrum), csökkentsd a zajt (spektrális kivonás), majd exportálj WAV-ba. Klasszikus jelfeldolgozást használ, nem tanított MI-modellt. A hang soha nem hagyja el a böngészőt; csak a beállítások maradnak a localStorage-ban. Felület 7 nyelven. Licenc: MIT.
+Az Ecoul Spectral egyetlen fájlból álló spektrogramszerkesztő a böngészőben: jelölj ki egy idő–frekvencia tartományt, és különítsd el vagy távolítsd el, ismerd fel vagy távolítsd el az emberi hangot (harmonic product spectrum), csökkentsd a zajt (spektrális kivonás), majd exportálj WAV-ba. Klasszikus jelfeldolgozást használ, nem tanított MI-modellt. A hang soha nem hagyja el a böngészőt; csak a beállítások maradnak a localStorage-ban. Felület 8 nyelven. Licenc: MIT.
 
 Audit: 2026-10-10 (2. kör, 2026-10-11: a szlogen és a .wav minta csak dokumentálva, az alkalmazásban nincs módosítás) — ellenőrizve a kód (hálózati hívások nélkül), az akadálymentesség (axe: a kontraszt javítva) és a működés (WAV betöltése, kijelölés elkülönítése, hang elkülönítése).

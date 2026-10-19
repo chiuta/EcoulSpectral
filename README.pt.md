@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.1.0 · **Última atualização:** 2026-10-14
+**Versão:** 1.2.0 · **Última atualização:** 2026-10-19
+
+Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Separe um som de uma voz, com precisão cirúrgica, diretamente no navegador — um editor espectral num único ficheiro HTML.
 
@@ -26,11 +28,11 @@ O Ecoul Spectral é um editor de espectrogramas que corre localmente no navegado
 - Comparação A/B, «▶ resultado», «↻ usar como nova fonte», descarga WAV.
 - Guia integrado: «Visita guiada», «Manual», «Atalhos».
 - «Experimentar um sinal de teste»: no ecrã inicial, carrega um sinal sintético de 8 s gerado no navegador (voz harmónica com formantes, dois bipes de 2,4 kHz e ruído de fundo), para experimentar a seleção, «Isolar a voz» e a redução de ruído sem um ficheiro próprio. No primeiro carregamento da sessão abre-se a secção «Voz automática».
-- Interface em 7 idiomas: RO, EN, FR, IT, ES, PT, DE.
+- Interface em 8 idiomas: RO, EN, FR, IT, ES, PT, DE, HU.
 
 ## Manual de utilização
 
-1. Escolha o idioma (RO / EN / FR / IT / ES / PT / DE).
+1. Escolha o idioma (RO / EN / FR / IT / ES / PT / DE / HU).
 2. Arraste o ficheiro de áudio/vídeo para a página ou prima «escolher um ficheiro».
 3. Arraste com o rato sobre o espectrograma para marcar uma região; ajuste as margens ou escreva os valores em t0/t1/f0/f1 e prima «Definir seleção».
 4. Prima «Isolar seleção» (mantém apenas a região) ou «Remover seleção» (apaga-a). Ouça com «▶ resultado» e compare com «⇄ A/B».
@@ -88,6 +90,6 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf.
 
 ## Resumo em inglês
 
-O Ecoul Spectral é um editor de espectrogramas num único ficheiro, no navegador: selecione uma região tempo-frequência e isole-a ou remova-a, detete ou remova a voz (harmonic product spectrum), reduza o ruído (subtração espectral) e exporte em WAV. Usa processamento de sinal clássico, não um modelo de IA treinado. O áudio nunca sai do navegador; apenas as definições são guardadas em localStorage. Interface em 7 idiomas. Licença: MIT.
+O Ecoul Spectral é um editor de espectrogramas num único ficheiro, no navegador: selecione uma região tempo-frequência e isole-a ou remova-a, detete ou remova a voz (harmonic product spectrum), reduza o ruído (subtração espectral) e exporte em WAV. Usa processamento de sinal clássico, não um modelo de IA treinado. O áudio nunca sai do navegador; apenas as definições são guardadas em localStorage. Interface em 8 idiomas. Licença: MIT.
 
 Auditoria: 2026-10-10 (ronda 2, 2026-10-11: slogan e amostra .wav apenas documentados, sem alterações na aplicação) — verificado o código (sem chamadas de rede), a acessibilidade (axe: contraste corrigido) e o funcionamento (carregamento WAV, isolamento da seleção, isolamento da voz).

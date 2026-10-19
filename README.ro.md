@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 2026-10-14
+**Versiune:** 1.2.0 · **Ultima actualizare:** 2026-10-19
+
+Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Separă un sunet de o voce, chirurgical, direct în browser — editor spectral pe un singur fișier HTML.
 
@@ -26,11 +28,11 @@ Ecoul Spectral este un editor de spectrogramă care rulează local în browser. 
 - Comparare A/B, „▶ rezultat”, „↻ folosește ca sursă nouă”, descărcare WAV.
 - Ghid integrat: „Tur ghidat”, „Manual”, „Scurtături”.
 - „Încearcă un semnal de test”: pe ecranul inițial, încarcă un semnal sintetic de 8 s generat în browser (voce armonică cu formanți, două bipuri de 2,4 kHz și zgomot de fond), ca să încerci selecția, „Izolează vocea” și reducerea zgomotului fără un fișier propriu. La prima încărcare din sesiune se deschide secțiunea „Voce automată”.
-- Interfață în 7 limbi: RO, EN, FR, IT, ES, PT, DE.
+- Interfață în 8 limbi: RO, EN, FR, IT, ES, PT, DE, HU.
 
 ## Manual de utilizare
 
-1. Alege limba (RO / EN / FR / IT / ES / PT / DE).
+1. Alege limba (RO / EN / FR / IT / ES / PT / DE / HU).
 2. Trage fișierul audio/video pe pagină sau apasă „alege un fișier”.
 3. Trage cu mouse-ul pe spectrogramă pentru a marca o regiune; ajustează-i marginile sau scrie valorile în t0/t1/f0/f1 și apasă „Setează selecția”.
 4. Apasă „Izolează selecția” (păstrezi doar regiunea) sau „Elimină selecția” (o ștergi). Ascultă cu „▶ rezultat” și compară cu „⇄ A/B”.
@@ -88,6 +90,6 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf.
 
 ## English summary
 
-Ecoul Spectral is a single-file, in-browser spectrogram editor: select a time-frequency region and isolate or remove it, detect or remove voice (harmonic product spectrum), reduce noise (spectral subtraction), then export WAV. It uses classic DSP, not a trained AI model. Audio never leaves the browser; only settings are kept in localStorage. 7 UI languages. License: MIT.
+Ecoul Spectral is a single-file, in-browser spectrogram editor: select a time-frequency region and isolate or remove it, detect or remove voice (harmonic product spectrum), reduce noise (spectral subtraction), then export WAV. It uses classic DSP, not a trained AI model. Audio never leaves the browser; only settings are kept in localStorage. 8 UI languages. License: MIT.
 
 Audit: 2026-10-10 (rundă 2, 2026-10-11: slogan și eșantion .wav doar documentate, fără modificări în aplicație) — verificat codul (fără apeluri de rețea), accesibilitatea (axe: contrast corectat) și funcționarea (încărcare WAV, izolare selecție, izolare voce).

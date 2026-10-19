@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.1.0 · **Last updated:** 2026-10-14
+**Version:** 1.2.0 · **Last updated:** 2026-10-19
+
+Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
 Separate a sound from a voice, surgically, right in the browser — a spectral editor in a single HTML file.
 
@@ -26,11 +28,11 @@ Ecoul Spectral is a spectrogram editor that runs locally in the browser. You loa
 - A/B comparison, "▶ result", "↻ use as new source", WAV download.
 - Built-in guide: "Guided tour", "Manual", "Shortcuts".
 - "Try a test signal": on the initial screen, it loads an 8 s synthetic signal generated in the browser (a harmonic voice with formants, two 2.4 kHz beeps and background noise), so you can try the selection, "Isolate voice" and noise reduction without a file of your own. On the first load in a session the "Automatic voice" section opens.
-- Interface in 7 languages: RO, EN, FR, IT, ES, PT, DE.
+- Interface in 8 languages: RO, EN, FR, IT, ES, PT, DE, HU.
 
 ## User guide
 
-1. Choose the language (RO / EN / FR / IT / ES / PT / DE).
+1. Choose the language (RO / EN / FR / IT / ES / PT / DE / HU).
 2. Drag the audio/video file onto the page or press "choose a file".
 3. Drag with the mouse on the spectrogram to mark a region; adjust its edges or type the values into t0/t1/f0/f1 and press "Set selection".
 4. Press "Isolate selection" (you keep only the region) or "Remove selection" (you delete it). Listen with "▶ result" and compare with "⇄ A/B".
