@@ -88,8 +88,7 @@ MIT az alkalmazás kódjára és szerkezetére — lásd a `LICENSE` fájlt. A f
 
 Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf.
 
-## Angol nyelvű összefoglaló
-
+## Összefoglaló
 Az Ecoul Spectral egyetlen fájlból álló spektrogramszerkesztő a böngészőben: jelölj ki egy idő–frekvencia tartományt, és különítsd el vagy távolítsd el, ismerd fel vagy távolítsd el az emberi hangot (harmonic product spectrum), csökkentsd a zajt (spektrális kivonás), majd exportálj WAV-ba. Klasszikus jelfeldolgozást használ, nem tanított MI-modellt. A hang soha nem hagyja el a böngészőt; csak a beállítások maradnak a localStorage-ban. Felület 8 nyelven. Licenc: MIT.
 
 Audit: 2026-10-10 (2. kör, 2026-10-11: a szlogen és a .wav minta csak dokumentálva, az alkalmazásban nincs módosítás) — ellenőrizve a kód (hálózati hívások nélkül), az akadálymentesség (axe: a kontraszt javítva) és a működés (WAV betöltése, kijelölés elkülönítése, hang elkülönítése).

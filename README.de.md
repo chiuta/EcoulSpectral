@@ -88,8 +88,7 @@ MIT für den Code und die Struktur der App — siehe Datei `LICENSE`. Eventuell 
 
 Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf.
 
-## Zusammenfassung auf Englisch
-
+## Zusammenfassung
 Ecoul Spectral ist ein Spektrogramm-Editor in einer einzigen Datei, im Browser: Wähle einen Zeit-Frequenz-Bereich und isoliere oder entferne ihn, erkenne oder entferne die Stimme (Harmonic Product Spectrum), reduziere Rauschen (spektrale Subtraktion) und exportiere dann als WAV. Er nutzt klassische Signalverarbeitung, kein trainiertes KI-Modell. Das Audio verlässt den Browser nie; nur die Einstellungen werden in localStorage gespeichert. Oberfläche in 8 Sprachen. Lizenz: MIT.
 
 Audit: 2026-10-10 (Runde 2, 2026-10-11: Slogan und .wav-Beispiel nur dokumentiert, keine Änderungen in der App) — Code geprüft (keine Netzwerkaufrufe), Barrierefreiheit (axe: Kontrast korrigiert) und Funktion (WAV laden, Auswahl isolieren, Stimme isolieren).
