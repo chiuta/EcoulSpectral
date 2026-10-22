@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.2.1 · **Last updated:** 2026-10-22
+**Version:** 1.2.2 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +62,10 @@ The slogan "surgical" describes the precision of manual selection on the spectro
 Download `index.html` and open it in a browser; it does not require internet. Decoding of formats depends on the browser's codecs.
 
 ## History / Changelog
+
+### 1.2.2 — 2026-10-22
+
+fff-kit 1.1.2: PBKDF2 with 600,000 iterations, anti-clickjacking protection.
 
 ### 1.2.1 — 2026-10-22
 
