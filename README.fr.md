@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.2.0 · **Dernière mise à jour :** 2026-10-19
+**Version :** 1.2.1 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +62,10 @@ Le slogan « chirurgical » décrit la précision de la sélection manuelle sur 
 Téléchargez `index.html` et ouvrez-le dans le navigateur ; aucune connexion internet n'est nécessaire. Le décodage des formats dépend des codecs du navigateur.
 
 ## Historique / Changelog
+
+### 1.2.1 — 2026-10-22
+
+nouvelle option **WAV 24 bits** pour le résultat et les clips d’événements (case à côté du bouton de téléchargement) ; la confirmation pour les fichiers très longs est une boîte de dialogue intégrée au lieu du `confirm()` bloquant. finitions mobile et accessibilité : texte d’au moins 12 px et cibles tactiles d’au moins 24 px.
 
 ### 1.1.0 — 2026-10-14
 - Sauvegarde et étiquetage des données (fff-kit).

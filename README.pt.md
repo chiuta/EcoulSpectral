@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.2.0 · **Última atualização:** 2026-10-19
+**Versão:** 1.2.1 · **Última atualização:** 2026-10-22
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +62,10 @@ O slogan «cirúrgico» descreve a precisão da seleção manual sobre o espectr
 Descarregue `index.html` e abra-o no navegador; não requer internet. A descodificação dos formatos depende dos codecs do navegador.
 
 ## Histórico / Changelog
+
+### 1.2.1 — 2026-10-22
+
+nova opção **WAV de 24 bits** para o resultado e os clipes de eventos (caixa junto ao botão de transferência); a confirmação para ficheiros muito longos é uma caixa de diálogo integrada em vez do `confirm()` bloqueante. melhorias para telemóvel e acessibilidade: texto de pelo menos 12 px e áreas táteis de pelo menos 24 px.
 
 ### 1.1.0 — 2026-10-14
 - Cópia de segurança e etiquetagem de dados (fff-kit).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.2.0 · **Última actualización:** 2026-10-19
+**Versión:** 1.2.1 · **Última actualización:** 2026-10-22
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +62,10 @@ El eslogan «quirúrgico» describe la precisión de la selección manual sobre 
 Descarga `index.html` y ábrelo en el navegador; no requiere internet. La decodificación de formatos depende de los códecs del navegador.
 
 ## Historial / Changelog
+
+### 1.2.1 — 2026-10-22
+
+nueva opción **WAV de 24 bits** para el resultado y los clips de eventos (casilla junto al botón de descarga); la confirmación para archivos muy largos es un diálogo integrado en lugar del `confirm()` bloqueante. mejoras para móvil y accesibilidad: texto de al menos 12 px y áreas táctiles de al menos 24 px.
 
 ### 1.1.0 — 2026-10-14
 - Copia de seguridad y etiquetado de datos (fff-kit).

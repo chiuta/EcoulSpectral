@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.2.0 · **Ultimo aggiornamento:** 2026-10-19
+**Versione:** 1.2.1 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +62,10 @@ Lo slogan «chirurgico» descrive la precisione della selezione manuale sullo sp
 Scarica `index.html` e aprilo nel browser; non richiede internet. La decodifica dei formati dipende dai codec del browser.
 
 ## Cronologia / Changelog
+
+### 1.2.1 — 2026-10-22
+
+nuova opzione **WAV a 24 bit** per il risultato e i clip degli eventi (casella accanto al pulsante di download); la conferma per i file molto lunghi è una finestra in linea invece del `confirm()` bloccante. rifiniture per mobile e accessibilità: testo di almeno 12 px e aree tattili di almeno 24 px.
 
 ### 1.1.0 — 2026-10-14
 - Copia di riserva ed etichettatura dei dati (fff-kit).

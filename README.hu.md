@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.2.0 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.2.1 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +62,10 @@ A „sebészi” szlogen a spektrogramon végzett kézi kijelölés pontosságá
 Töltsd le az `index.html` fájlt, és nyisd meg böngészőben; nem igényel internetet. A formátumok dekódolása a böngésző kodekjeitől függ.
 
 ## Előzmények / Changelog
+
+### 1.2.1 — 2026-10-22
+
+új **24 bites WAV** opció az eredményhez és az eseményklipekhez (jelölőnégyzet a letöltés gomb mellett); a nagyon hosszú fájlok megerősítése soron belüli párbeszédablak a blokkoló `confirm()` helyett. mobil és kisegítő finomítások: legalább 12 px-es szöveg és legalább 24 px-es érintési felületek.
 
 ### 1.1.0 — 2026-10-14
 - Biztonsági mentés és adatcímkézés (fff-kit).

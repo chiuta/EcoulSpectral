@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.2.0 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.2.1 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -62,6 +62,10 @@ Der Slogan „chirurgisch“ beschreibt die Präzision der manuellen Auswahl im 
 Lade `index.html` herunter und öffne die Datei im Browser; es ist kein Internet nötig. Die Dekodierung der Formate hängt von den Codecs des Browsers ab.
 
 ## Verlauf / Changelog
+
+### 1.2.1 — 2026-10-22
+
+neue Option **24-Bit-WAV** für das Ergebnis und die Ereignis-Clips (Kontrollkästchen neben dem Download-Button); die Rückfrage bei sehr langen Dateien ist ein Inline-Dialog statt des blockierenden `confirm()`. Feinschliff für Mobilgeräte und Barrierefreiheit: Text mit mindestens 12 px und Touch-Ziele von mindestens 24 px.
 
 ### 1.1.0 — 2026-10-14
 - Datensicherung und Datenkennzeichnung (fff-kit).
