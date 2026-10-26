@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.2.6 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -29,6 +29,11 @@ Ecoul Spectral este un editor de spectrogramă care rulează local în browser. 
 - Ghid integrat: „Tur ghidat”, „Manual”, „Scurtături”.
 - „Încearcă un semnal de test”: pe ecranul inițial, încarcă un semnal sintetic de 8 s generat în browser (voce armonică cu formanți, două bipuri de 2,4 kHz și zgomot de fond), ca să încerci selecția, „Izolează vocea” și reducerea zgomotului fără un fișier propriu. La prima încărcare din sesiune se deschide secțiunea „Voce automată”.
 - Interfață în 8 limbi: RO, EN, FR, IT, ES, PT, DE, HU.
+
+## Novități v2.0.0
+
+- **Pensulă spectrală**: marchezi o zonă timp-frecvență pe spectrogramă și o adaugi ca zonă atenuată (−3, −6, −12, −24 sau −40 dB, cu muchie moale reglabilă). Zonele sunt doar o listă de parametri (maximum 80, suprapunerile se compun), așa că **anularea și refacerea sunt nelimitate**, iar ștergerea se poate face pe element. „Aplică pensula” procesează tot clipul și produce un rezultat (A/B, descărcare WAV, folosire ca sursă). Totul rulează local.
+- Neimplementat încă: adnotări cu export de segmente și compararea a două înregistrări.
 
 ## Manual de utilizare
 

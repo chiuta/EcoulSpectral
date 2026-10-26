@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "ecoulspectral",
   "name": "Ecoul Spectral",
-  "version": "1.2.6",
+  "version": "2.0.0",
   "updated": "2026-10-26",
   "description": "Separă un sunet de o voce, chirurgical, direct în browser — gratuit, offline, fără cont. / Surgically separate a sound from a voice — free, offline, no account.",
   "egress": [],
@@ -13,8 +13,8 @@
   "storageKeys": [
     "ecoulSpectral.settings.v1"
   ],
-  "sizeBytes": 497582,
-  "sha256": "1bf3bf70f3b26caaf660684f149d7ccb1cd1897ab8b435081732a52f394212a6",
+  "sizeBytes": 513173,
+  "sha256": "30ee6324bd9b9246bbca118a2b28afa9d78ddf65af940ccc82432b85f63503e4",
   "csp": {
     "present": true,
     "directives": {
