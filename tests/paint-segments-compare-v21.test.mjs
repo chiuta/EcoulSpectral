@@ -203,7 +203,11 @@ console.log('i18n: EN, alte limbi cu rezervă engleză, secțiuni accesibile');
   await p.evaluate(() => ES_BRUSH.setSelection({f0: 60, f1: 200, k0: 200, k1: 204})); await p.click('#btnPaintAdd');
   t('EN: rândul de pictură tradus', /painted/.test(await p.textContent('#brushList')) && /tone/.test(await p.textContent('#brushList')));
   await p.selectOption('#langSelect', 'fr'); await p.waitForTimeout(300);
-  t('FR: textele noi cad pe engleză, restul aplicației rămâne în franceză', /painted area/.test(await p.textContent('#btnPaintAdd')) && !/Pinsel/.test(await p.textContent('#btnBrushApply')));
+  t('FR: textele noi sunt traduse (nu cad pe engleză)', /zone peinte/.test(await p.textContent('#btnPaintAdd')) && !/painted area/.test(await p.textContent('#btnPaintAdd')) && !/Pinsel/.test(await p.textContent('#btnBrushApply')));
+  for (const [lg, re] of [['it', /area dipinta/], ['es', /zona pintada/], ['pt', /zona pintada/], ['de', /gemalten Bereich/], ['hu', /festett terület/]]) {
+    await p.selectOption('#langSelect', lg); await p.waitForTimeout(250);
+    t(lg.toUpperCase() + ': pictură, segmente, comparare traduse (nu engleză)', re.test(await p.textContent('#btnPaintAdd')) && !/Segments|Compare two/.test(await p.textContent('#toolSegments summary') + await p.textContent('#toolCompare summary')));
+  }
   await p.selectOption('#langSelect', 'ro'); await p.waitForTimeout(300);
   t('RO: revenire', /zonă pictată/.test(await p.textContent('#btnPaintAdd')));
   t('0 erori', errs.length === 0, errs);

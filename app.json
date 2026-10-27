@@ -13,8 +13,8 @@
   "storageKeys": [
     "ecoulSpectral.settings.v1"
   ],
-  "sizeBytes": 541664,
-  "sha256": "8e6a0d6f4d3ffea92335ccd40eb7bd0fceaaf69656016ebb92ab771d6b51ed3a",
+  "sizeBytes": 559470,
+  "sha256": "853a2cc368d641cc3b722b655e32fce48c0f70e8975084479aac3949fecd5f13",
   "csp": {
     "present": true,
     "directives": {

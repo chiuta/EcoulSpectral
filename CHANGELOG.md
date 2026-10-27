@@ -10,7 +10,7 @@ Stare: stabil · Offline: complet
 - **Pictură spectrală**: în secțiunea Pensulă, selecția poate fi adăugată ca zonă „pictată” — ton (o sinusoidă pe bin, faze fixe, reproductibil) sau zgomot cu bandă limitată, la un nivel RMS ales, plafonat la −12 dBFS. Energia se adaugă direct în STFT și se resintetizează prin ISTFT-ul existent, în aceeași trecere cu atenuările pensulei (anulare/refacere/listă comune; zonele de atenuare suprapuse atenuează și sunetul pictat). Nu recuperează informație: adaugă sunet nou.
 - **Segmente (adnotări)**: intervale de timp etichetate din selecție, cu ascultare, salvare WAV 16 biți, export listă CSV și JSON, marcaj pe spectrogramă; se șterg la încărcarea altui fișier.
 - **Comparare a două înregistrări**: spectru mediu pe termen lung (Welch, Hann 4096) în benzi de 1/3 de octavă, în dBFS necalibrat; tabel, grafic, CSV, ascultare A/B, aliniere opțională a RMS-ului lui B (câștig limitat ca vârful ≤ 0,98).
-- Texte noi în RO și EN; celelalte limbi folosesc engleza (traducere automată în așteptare).
+- Texte noi scrise în RO și EN; traduceri FR/IT/ES/PT/DE/HU adăugate ulterior — traducere automată, nevalidată de vorbitori nativi.
 - Teste noi: `tests/paint-segments-compare-v21.test.mjs`.
 
 ### Neimplementat
