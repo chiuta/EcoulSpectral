@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.0.0 · **Dernière mise à jour :** 2026-10-26
+**Version :** 2.0.1 · **Dernière mise à jour :** 2026-10-27
+
+**État:** stable · **Hors ligne:** complet
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -61,7 +63,23 @@ Le slogan « chirurgical » décrit la précision de la sélection manuelle sur 
 
 Téléchargez `index.html` et ouvrez-le dans le navigateur ; aucune connexion internet n'est nécessaire. Le décodage des formats dépend des codecs du navigateur.
 
+## Formats et opérations (d’après le code réel)
+
+- **Entrée :** tout fichier audio ou vidéo que le navigateur sait décoder (`decodeAudioData` ; en général WAV, MP3, AAC/M4A, OGG/Opus, FLAC et la piste audio de MP4/WebM, selon les codecs du navigateur). Si le décodage échoue, l’application affiche une commande ffmpeg. Au-delà de 10 minutes, une confirmation est demandée. Tous les canaux (mono/stéréo) sont conservés.
+- **Analyse :** STFT, fenêtre de Hann de 2048 échantillons, pas de 512.
+- **Filtrage/masquage :** « Isoler la sélection » / « Supprimer la sélection » (rectangle temps–fréquence à bords réglables, resynthèse par ISTFT avec recouvrement-addition).
+- **Pinceau spectral :** jusqu’à 80 zones atténuées (jusqu’à −40 dB, bord doux, annulation/rétablissement illimités). Le pinceau **atténue** ; il ne « peint » pas de nouveau son et ne synthétise pas.
+- **Voix automatique :** détection harmonique (Harmonic Product Spectrum, 70–400 Hz) avec isolation/suppression sur tout le clip.
+- **Bruit de fond :** soustraction spectrale, profil issu de la sélection / automatique (sans voix) / passage le plus silencieux ; « suppression complète » en option.
+- **Événements automatiques** avec composantes Mid/Side et export de tous les événements ; **édition de base :** fondu entrant/sortant, recadrage sur la sélection, normalisation, inversion, vitesse 0,5×–2×, repères, boucle, comparaison A/B.
+- **Sortie :** WAV PCM 16 ou 24 bits, à la fréquence d’échantillonnage de la source. Pas d’export MP3/FLAC.
+
+## Captures d’écran
+
+Le dépôt contient la capture de l’écran d’accueil. Captures de l’espace de travail (sélection, voix, bruit) : à ajouter par l’auteur.
+
 ## Historique / Changelog
+- **2.0.1 — 2026-10-27 :** la description (meta, Open Graph, manifeste, `app.json`) et le README (8 langues) indiquent désormais concrètement les formats et opérations de l’application, d’après le code ; note « Captures d’écran : à ajouter par l’auteur » ; lignes État/Hors ligne ; CHANGELOG.md (précédente : v2.0.0).
 
 ### 1.2.3 — 2026-10-22
 

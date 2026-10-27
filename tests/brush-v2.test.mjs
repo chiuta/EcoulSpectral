@@ -1,4 +1,4 @@
-// Teste v2.0.0 pentru Ecoul Spectral: pensulă spectrală (zone atenuate, listă de parametri, anulare/refacere nelimitate, aplicare pe tot clipul).
+// Teste v2.0.1 pentru Ecoul Spectral: pensulă spectrală (zone atenuate, listă de parametri, anulare/refacere nelimitate, aplicare pe tot clipul).
 // Rulare: node tests/brush-v2.test.mjs   (Playwright din /opt/node-tools, rețea blocată). Fără redare audio: se verifică masca și semnalul rezultat.
 import {createRequire} from 'module';
 import fs from 'fs';
