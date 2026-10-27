@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 2.0.0 · **Ultimo aggiornamento:** 2026-10-26
+**Versione:** 2.0.1 · **Ultimo aggiornamento:** 2026-10-27
+
+**Stato:** stabile · **Offline:** completo
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -61,7 +63,23 @@ Lo slogan «chirurgico» descrive la precisione della selezione manuale sullo sp
 
 Scarica `index.html` e aprilo nel browser; non richiede internet. La decodifica dei formati dipende dai codec del browser.
 
+## Formati e operazioni (dal codice reale)
+
+- **Ingresso:** qualsiasi file audio o video che il browser sappia decodificare (`decodeAudioData`; di norma WAV, MP3, AAC/M4A, OGG/Opus, FLAC e la traccia audio di MP4/WebM, secondo i codec del browser). Se la decodifica fallisce, l’app mostra un comando ffmpeg. Oltre 10 minuti chiede conferma. Tutti i canali (mono/stereo) sono mantenuti.
+- **Analisi:** STFT, finestra di Hann di 2048 campioni, passo 512.
+- **Filtraggio/mascheratura:** «Isola la selezione» / «Rimuovi la selezione» (rettangolo tempo–frequenza con bordi regolabili, risintesi con ISTFT e overlap-add).
+- **Pennello spettrale:** fino a 80 aree attenuate (fino a −40 dB, bordo morbido, annulla/ripeti illimitati). Il pennello **attenua**; non «dipinge» suono nuovo e non sintetizza.
+- **Voce automatica:** rilevamento armonico (Harmonic Product Spectrum, 70–400 Hz) con isolamento/rimozione su tutta la clip.
+- **Rumore di fondo:** sottrazione spettrale, profilo dalla selezione / automatico (senza voce) / tratto più silenzioso; «rimozione completa» opzionale.
+- **Eventi automatici** con componenti Mid/Side ed esportazione di tutti gli eventi; **modifica di base:** dissolvenza in/out, ritaglio sulla selezione, normalizzazione, inversione, velocità 0,5×–2×, marcatori, loop, confronto A/B.
+- **Uscita:** WAV PCM a 16 o 24 bit, alla frequenza di campionamento della sorgente. Non esporta MP3/FLAC.
+
+## Schermate
+
+Il repository contiene la schermata iniziale. Schermate dell’area di lavoro (selezione, voce, rumore): da aggiungere a cura dell’autore.
+
 ## Cronologia / Changelog
+- **2.0.1 — 2026-10-27:** la descrizione (meta, Open Graph, manifest, `app.json`) e il README (8 lingue) indicano ora in concreto formati e operazioni dell’app, in base al codice; nota «Schermate: da aggiungere a cura dell’autore»; righe Stato/Offline; CHANGELOG.md (precedente: v2.0.0).
 
 ### 1.2.3 — 2026-10-22
 

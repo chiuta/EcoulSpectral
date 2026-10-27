@@ -2,9 +2,9 @@
   "schema": 1,
   "slug": "ecoulspectral",
   "name": "Ecoul Spectral",
-  "version": "2.0.0",
-  "updated": "2026-10-26",
-  "description": "Separă un sunet de o voce, chirurgical, direct în browser — gratuit, offline, fără cont. / Surgically separate a sound from a voice — free, offline, no account.",
+  "version": "2.0.1",
+  "updated": "2026-10-27",
+  "description": "Editor de spectrogramă offline: izolezi sau elimini regiuni timp–frecvență (STFT/ISTFT), pensulă spectrală, detecție de voce armonică, reducere de zgomot prin scădere spectrală, evenimente Mid/Side, fade/tăiere/normalizare, export WAV 16/24 biți. Fără cont. / Offline spectrogram editor: isolate or remove time–frequency regions (STFT/ISTFT), spectral brush, harmonic voice detection, spectral-subtraction noise reduction, Mid/Side events, fade/trim/normalize, 16/24-bit WAV export. No account.",
   "egress": [],
   "permissions": [
     "serviceWorker",
@@ -13,8 +13,8 @@
   "storageKeys": [
     "ecoulSpectral.settings.v1"
   ],
-  "sizeBytes": 513173,
-  "sha256": "30ee6324bd9b9246bbca118a2b28afa9d78ddf65af940ccc82432b85f63503e4",
+  "sizeBytes": 514507,
+  "sha256": "3d34e1f050ca333b6ed567952762aeac1f4f12fdd37ce2d26700af7b114045d2",
   "csp": {
     "present": true,
     "directives": {

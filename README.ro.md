@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -66,7 +68,23 @@ Sloganul „chirurgical” descrie precizia selecției manuale pe spectrogramă,
 
 Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decodarea formatelor depinde de codecurile browserului.
 
+## Formate și operații (din codul real)
+
+- **Intrare:** orice fișier audio sau video pe care browserul îl poate decoda (`decodeAudioData`; de obicei WAV, MP3, AAC/M4A, OGG/Opus, FLAC și pista audio din MP4/WebM, în funcție de codecurile browserului). Dacă decodarea eșuează, aplicația arată o comandă ffmpeg. Peste 10 minute cere confirmare. Toate canalele (mono/stereo) sunt păstrate.
+- **Analiză:** STFT, fereastră Hann de 2048 de eșantioane, pas de 512.
+- **Filtrare/mascare:** „Izolează selecția” / „Elimină selecția” (dreptunghi timp–frecvență cu margini reglabile, resinteză prin ISTFT cu suprapunere-adunare).
+- **Pensulă spectrală:** până la 80 de zone atenuate (până la −40 dB, margine moale, anulare/refacere nelimitate). Pensula **atenuează**; nu „pictează” sunet nou și nu sintetizează.
+- **Voce automată:** detecție armonică (Harmonic Product Spectrum, 70–400 Hz) cu izolare/eliminare pe tot clipul.
+- **Zgomot de fond:** scădere spectrală, profil din selecție / automat (fără voce) / cea mai liniștită porțiune; opțional „eliminare completă”.
+- **Evenimente automate** cu componente Mid/Side și export al tuturor evenimentelor; **editare de bază:** fade in/out, tăiere la selecție, normalizare, inversare, viteză 0,5×–2×, repere, buclă, comparare A/B.
+- **Ieșire:** WAV PCM pe 16 sau 24 de biți, la rata sursei. Nu exportă MP3/FLAC.
+
+## Capturi de ecran
+
+Depozitul conține captura ecranului de start. Capturile spațiului de lucru (selecție, voce, zgomot): de adăugat de autor.
+
 ## Istoric / Changelog
+- **2.0.1 — 2026-10-27:** descrierea (meta, Open Graph, manifest, `app.json`) și README (8 limbi) spun acum concret ce formate și operații are aplicația, pe baza codului; notă „Capturi de ecran: de adăugat de autor”; linii Stare/Offline; CHANGELOG.md (anterior: v2.0.0).
 
 ### 1.2.3 — 2026-10-22
 

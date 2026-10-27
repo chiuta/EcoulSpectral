@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Zuletzt aktualisiert:** 2026-10-26
+**Version:** 2.0.1 · **Zuletzt aktualisiert:** 2026-10-27
+
+**Status:** stabil · **Offline:** vollständig
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -61,7 +63,23 @@ Der Slogan „chirurgisch“ beschreibt die Präzision der manuellen Auswahl im 
 
 Lade `index.html` herunter und öffne die Datei im Browser; es ist kein Internet nötig. Die Dekodierung der Formate hängt von den Codecs des Browsers ab.
 
+## Formate und Operationen (nach dem tatsächlichen Code)
+
+- **Eingabe:** jede Audio- oder Videodatei, die der Browser dekodieren kann (`decodeAudioData`; meist WAV, MP3, AAC/M4A, OGG/Opus, FLAC und die Tonspur von MP4/WebM, je nach Codecs des Browsers). Schlägt die Dekodierung fehl, zeigt die App einen ffmpeg-Befehl. Über 10 Minuten wird nachgefragt. Alle Kanäle (Mono/Stereo) bleiben erhalten.
+- **Analyse:** STFT, Hann-Fenster mit 2048 Abtastwerten, Hop 512.
+- **Filtern/Maskieren:** „Auswahl isolieren“ / „Auswahl entfernen“ (Zeit–Frequenz-Rechteck mit einstellbaren Rändern, Resynthese per ISTFT mit Overlap-Add).
+- **Spektralpinsel:** bis zu 80 abgeschwächte Bereiche (bis −40 dB, weicher Rand, unbegrenztes Rückgängig/Wiederholen). Der Pinsel **schwächt ab**; er „malt“ keinen neuen Klang und synthetisiert nicht.
+- **Automatische Stimme:** harmonische Erkennung (Harmonic Product Spectrum, 70–400 Hz) mit Isolieren/Entfernen im ganzen Clip.
+- **Hintergrundrauschen:** Spektralsubtraktion, Profil aus Auswahl / automatisch (ohne Stimme) / ruhigster Abschnitt; optional „vollständiges Entfernen“.
+- **Automatische Ereignisse** mit Mid/Side-Komponenten und Export aller Ereignisse; **Grundbearbeitung:** Ein-/Ausblenden, Zuschneiden auf Auswahl, Normalisieren, Umkehren, Tempo 0,5×–2×, Marker, Schleife, A/B-Vergleich.
+- **Ausgabe:** PCM-WAV, 16 oder 24 Bit, mit der Abtastrate der Quelle. Kein MP3/FLAC-Export.
+
+## Screenshots
+
+Das Repository enthält den Screenshot des Startbildschirms. Screenshots des Arbeitsbereichs (Auswahl, Stimme, Rauschen): vom Autor noch hinzuzufügen.
+
 ## Verlauf / Changelog
+- **2.0.1 — 2026-10-27:** Beschreibung (Meta, Open Graph, Manifest, `app.json`) und README (8 Sprachen) nennen jetzt konkret die Formate und Operationen der App, nach dem Code; Hinweis „Screenshots: vom Autor noch hinzuzufügen“; Zeilen Status/Offline; CHANGELOG.md (vorher: v2.0.0).
 
 ### 1.2.3 — 2026-10-22
 

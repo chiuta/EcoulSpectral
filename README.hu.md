@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.0.0 · **Utolsó frissítés:** 2026-10-26
+**Verzió:** 2.0.1 · **Utolsó frissítés:** 2026-10-27
+
+**Állapot:** stabil · **Offline:** teljes
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -61,7 +63,23 @@ A „sebészi” szlogen a spektrogramon végzett kézi kijelölés pontosságá
 
 Töltsd le az `index.html` fájlt, és nyisd meg böngészőben; nem igényel internetet. A formátumok dekódolása a böngésző kodekjeitől függ.
 
+## Formátumok és műveletek (a tényleges kód alapján)
+
+- **Bemenet:** bármely hang- vagy videófájl, amelyet a böngésző dekódolni tud (`decodeAudioData`; jellemzően WAV, MP3, AAC/M4A, OGG/Opus, FLAC és az MP4/WebM hangsávja, a böngésző kodekjeitől függően). Ha a dekódolás meghiúsul, az alkalmazás ffmpeg-parancsot mutat. 10 percen túl megerősítést kér. Minden csatorna (mono/sztereó) megmarad.
+- **Elemzés:** STFT, 2048 mintás Hann-ablak, 512-es lépés.
+- **Szűrés/maszkolás:** „Kijelölés izolálása” / „Kijelölés eltávolítása” (idő–frekvencia téglalap állítható szélekkel, ISTFT-alapú újraszintézis átfedéses összeadással).
+- **Spektrális ecset:** legfeljebb 80 csillapított terület (akár −40 dB, lágy szél, korlátlan visszavonás/ismétlés). Az ecset **csillapít**; nem „fest” új hangot, és nem szintetizál.
+- **Automatikus hang:** harmonikus felismerés (Harmonic Product Spectrum, 70–400 Hz), izolálás/eltávolítás a teljes klipen.
+- **Háttérzaj:** spektrális kivonás, profil a kijelölésből / automatikus (hang nélkül) / legcsendesebb szakasz; opcionális „teljes eltávolítás”.
+- **Automatikus események** Mid/Side összetevőkkel és az összes esemény exportjával; **alapszerkesztés:** be-/kifejtés, vágás a kijelölésre, normalizálás, megfordítás, sebesség 0,5×–2×, jelölők, hurok, A/B-összehasonlítás.
+- **Kimenet:** PCM WAV, 16 vagy 24 bit, a forrás mintavételi frekvenciáján. MP3/FLAC exportot nem végez.
+
+## Képernyőképek
+
+A tároló a kezdőképernyő képét tartalmazza. A munkaterület (kijelölés, hang, zaj) képernyőképeit a szerzőnek kell hozzáadnia.
+
 ## Előzmények / Changelog
+- **2.0.1 — 2026-10-27:** a leírás (meta, Open Graph, manifest, `app.json`) és a README (8 nyelv) most konkrétan megnevezi az alkalmazás formátumait és műveleteit a kód alapján; megjegyzés: „Képernyőképek: a szerzőnek kell hozzáadnia”; Állapot/Offline sorok; CHANGELOG.md (előző: v2.0.0).
 
 ### 1.2.3 — 2026-10-22
 

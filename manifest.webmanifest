@@ -1,7 +1,7 @@
 {
   "name": "Ecoul Spectral",
   "short_name": "Ecoul",
-  "description": "Separă un sunet de o voce, chirurgical, direct în browser — gratuit, offline, fără cont. / Surgically separate a sound from a voice — free, offline, no account.",
+  "description": "Editor de spectrogramă offline: izolezi sau elimini regiuni timp–frecvență (STFT/ISTFT), pensulă spectrală, detecție de voce armonică, reducere de zgomot prin scădere spectrală, evenimente Mid/Side, fade/tăiere/normalizare, export WAV 16/24 biți. Fără cont. / Offline spectrogram editor: isolate or remove time–frequency regions (STFT/ISTFT), spectral brush, harmonic voice detection, spectral-subtraction noise reduction, Mid/Side events, fade/trim/normalize, 16/24-bit WAV export. No account.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
