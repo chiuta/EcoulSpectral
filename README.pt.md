@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.0.1 · **Última atualização:** 2026-10-27
+**Versão:** 2.1.0 · **Última atualização:** 2026-10-27
 
 **Estado:** estável · **Offline:** completo
 
@@ -68,7 +68,7 @@ Descarregue `index.html` e abra-o no navegador; não requer internet. A descodif
 - **Entrada:** qualquer ficheiro de áudio ou vídeo que o navegador consiga descodificar (`decodeAudioData`; normalmente WAV, MP3, AAC/M4A, OGG/Opus, FLAC e a faixa de áudio de MP4/WebM, conforme os codecs do navegador). Se a descodificação falhar, a aplicação mostra um comando ffmpeg. Acima de 10 minutos pede confirmação. Todos os canais (mono/estéreo) são mantidos.
 - **Análise:** STFT, janela de Hann de 2048 amostras, salto de 512.
 - **Filtragem/mascaramento:** «Isolar a seleção» / «Remover a seleção» (retângulo tempo–frequência com margens ajustáveis, ressíntese por ISTFT com sobreposição e soma).
-- **Pincel espectral:** até 80 áreas atenuadas (até −40 dB, margem suave, anular/refazer ilimitados). O pincel **atenua**; não «pinta» som novo nem sintetiza.
+- **Pincel espectral:** até 80 áreas atenuadas (até −40 dB, margem suave, anular/refazer ilimitados). O pincel **atenua**. Desde a 2.1.0, a **pintura espectral** adiciona som sintético (tom = uma sinusoide por bin, ou ruído de banda limitada) no retângulo selecionado, com nível RMS escolhido e teto de −12 dBFS; adiciona som novo e não recupera informação perdida. Novidades: **segmentos** (intervalos etiquetados: audição, WAV, exportação CSV/JSON) e **comparação de duas gravações** (espectro médio em terços de oitava, dBFS não calibrado). Textos novos em RO/EN; inglês nas outras línguas.
 - **Voz automática:** deteção harmónica (Harmonic Product Spectrum, 70–400 Hz) com isolamento/remoção em todo o clipe.
 - **Ruído de fundo:** subtração espectral, perfil da seleção / automático (sem voz) / trecho mais silencioso; «remoção completa» opcional.
 - **Eventos automáticos** com componentes Mid/Side e exportação de todos os eventos; **edição básica:** fade in/out, corte à seleção, normalização, inversão, velocidade 0,5×–2×, marcadores, ciclo, comparação A/B.
@@ -79,6 +79,7 @@ Descarregue `index.html` e abra-o no navegador; não requer internet. A descodif
 O repositório contém a captura do ecrã inicial. Capturas do espaço de trabalho (seleção, voz, ruído): a adicionar pelo autor.
 
 ## Histórico / Changelog
+- **2.1.0 — 2026-10-27:** spectral paint, segments with CSV/JSON/WAV export, two-recording comparison (details: CHANGELOG.md).
 - **2.0.1 — 2026-10-27:** a descrição (meta, Open Graph, manifesto, `app.json`) e o README (8 idiomas) indicam agora de forma concreta os formatos e operações da aplicação, com base no código; nota «Capturas de ecrã: a adicionar pelo autor»; linhas Estado/Offline; CHANGELOG.md (anterior: v2.0.0).
 
 ### 1.2.3 — 2026-10-22

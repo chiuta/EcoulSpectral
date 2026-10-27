@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet
 
@@ -35,7 +35,7 @@ Ecoul Spectral este un editor de spectrogramă care rulează local în browser. 
 ## Novități v2.0.0
 
 - **Pensulă spectrală**: marchezi o zonă timp-frecvență pe spectrogramă și o adaugi ca zonă atenuată (−3, −6, −12, −24 sau −40 dB, cu muchie moale reglabilă). Zonele sunt doar o listă de parametri (maximum 80, suprapunerile se compun), așa că **anularea și refacerea sunt nelimitate**, iar ștergerea se poate face pe element. „Aplică pensula” procesează tot clipul și produce un rezultat (A/B, descărcare WAV, folosire ca sursă). Totul rulează local.
-- Neimplementat încă: adnotări cu export de segmente și compararea a două înregistrări.
+- Pictura spectrală, segmentele cu export și compararea a două înregistrări sunt implementate din 2.1.0 (vezi mai jos).
 
 ## Manual de utilizare
 
@@ -73,7 +73,7 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decoda
 - **Intrare:** orice fișier audio sau video pe care browserul îl poate decoda (`decodeAudioData`; de obicei WAV, MP3, AAC/M4A, OGG/Opus, FLAC și pista audio din MP4/WebM, în funcție de codecurile browserului). Dacă decodarea eșuează, aplicația arată o comandă ffmpeg. Peste 10 minute cere confirmare. Toate canalele (mono/stereo) sunt păstrate.
 - **Analiză:** STFT, fereastră Hann de 2048 de eșantioane, pas de 512.
 - **Filtrare/mascare:** „Izolează selecția” / „Elimină selecția” (dreptunghi timp–frecvență cu margini reglabile, resinteză prin ISTFT cu suprapunere-adunare).
-- **Pensulă spectrală:** până la 80 de zone atenuate (până la −40 dB, margine moale, anulare/refacere nelimitate). Pensula **atenuează**; nu „pictează” sunet nou și nu sintetizează.
+- **Pensulă spectrală:** până la 80 de zone atenuate (până la −40 dB, margine moale, anulare/refacere nelimitate). Pensula **atenuează**. Din 2.1.0 există și **pictura spectrală**: adaugă sunet sintetic (ton = o sinusoidă pe bin, sau zgomot cu bandă limitată) în dreptunghiul selectat, la un nivel RMS ales, plafonat la −12 dBFS, prin aceeași trecere STFT/ISTFT. Adaugă sunet nou; nu recuperează informație pierdută. Noi: **segmente** (intervale de timp etichetate: ascultare, WAV, export CSV/JSON) și **compararea a două înregistrări** (spectru mediu pe termen lung în benzi de 1/3 de octavă, dBFS necalibrat, tabel/grafic/CSV, ascultare A/B). Textele noi există în RO și EN; celelalte limbi folosesc engleza (traducere automată în așteptare).
 - **Voce automată:** detecție armonică (Harmonic Product Spectrum, 70–400 Hz) cu izolare/eliminare pe tot clipul.
 - **Zgomot de fond:** scădere spectrală, profil din selecție / automat (fără voce) / cea mai liniștită porțiune; opțional „eliminare completă”.
 - **Evenimente automate** cu componente Mid/Side și export al tuturor evenimentelor; **editare de bază:** fade in/out, tăiere la selecție, normalizare, inversare, viteză 0,5×–2×, repere, buclă, comparare A/B.
@@ -84,6 +84,7 @@ Descarcă `index.html` și deschide-l în browser; nu necesită internet. Decoda
 Depozitul conține captura ecranului de start. Capturile spațiului de lucru (selecție, voce, zgomot): de adăugat de autor.
 
 ## Istoric / Changelog
+- **2.1.0 — 2026-10-27:** spectral paint, segments with CSV/JSON/WAV export, two-recording comparison (details: CHANGELOG.md).
 - **2.0.1 — 2026-10-27:** descrierea (meta, Open Graph, manifest, `app.json`) și README (8 limbi) spun acum concret ce formate și operații are aplicația, pe baza codului; notă „Capturi de ecran: de adăugat de autor”; linii Stare/Offline; CHANGELOG.md (anterior: v2.0.0).
 
 ### 1.2.3 — 2026-10-22

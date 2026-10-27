@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.1 · **Last updated:** 2026-10-27
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete
 
@@ -68,7 +68,7 @@ Download `index.html` and open it in a browser; it does not require internet. De
 - **Input:** any audio or video file the browser can decode (`decodeAudioData`; typically WAV, MP3, AAC/M4A, OGG/Opus, FLAC and the audio track of MP4/WebM, depending on the browser's codecs). If decoding fails, the app shows an ffmpeg command. Over 10 minutes it asks for confirmation. All channels (mono/stereo) are kept.
 - **Analysis:** STFT, 2048-sample Hann window, hop 512.
 - **Filtering/masking:** “Isolate selection” / “Remove selection” (a time–frequency rectangle with adjustable edges, resynthesis by ISTFT with overlap-add).
-- **Spectral brush:** up to 80 attenuated areas (down to −40 dB, soft edge, unlimited undo/redo). The brush **attenuates**; it does not “paint” new sound and does not synthesise.
+- **Spectral brush:** up to 80 attenuated areas (down to −40 dB, soft edge, unlimited undo/redo). The brush **attenuates**. Since 2.1.0 it also has **spectral paint**: it adds synthetic sound (tone = one sinusoid per bin, or band-limited noise) inside the selected rectangle at a chosen RMS level, capped at −12 dBFS, rendered through the same STFT/ISTFT pass. It adds new sound; it does not recover lost information. Also new: **segments** (labelled time intervals: play, WAV, CSV/JSON export) and **comparison of two recordings** (long-term average spectrum in 1/3-octave bands, uncalibrated dBFS, table/chart/CSV, A/B play). New texts exist in RO and EN; other languages fall back to English (machine translation pending).
 - **Automatic voice:** harmonic detection (Harmonic Product Spectrum, 70–400 Hz) with isolate/remove across the whole clip.
 - **Background noise:** spectral subtraction, profile from the selection / automatic (no voice) / quietest stretch; optional “complete removal”.
 - **Automatic events** with Mid/Side components and export of all events; **basic editing:** fade in/out, trim to selection, normalize, reverse, speed 0.5×–2×, markers, loop, A/B comparison.
@@ -79,6 +79,7 @@ Download `index.html` and open it in a browser; it does not require internet. De
 The repository contains the start-screen screenshot. Screenshots of the workspace (selection, voice, noise): to be added by the author.
 
 ## History / Changelog
+- **2.1.0 — 2026-10-27:** spectral paint, segments with CSV/JSON/WAV export, two-recording comparison (details: CHANGELOG.md).
 - **2.0.1 — 2026-10-27:** the description (meta, Open Graph, manifest, `app.json`) and the README (8 languages) now state concretely which formats and operations the app has, based on the code; note “Screenshots: to be added by the author”; Status/Offline lines; CHANGELOG.md (previous: v2.0.0).
 
 ### 1.2.3 — 2026-10-22
