@@ -13,8 +13,8 @@
   "storageKeys": [
     "ecoulSpectral.settings.v1"
   ],
-  "sizeBytes": 559470,
-  "sha256": "853a2cc368d641cc3b722b655e32fce48c0f70e8975084479aac3949fecd5f13",
+  "sizeBytes": 699904,
+  "sha256": "a81101e4315b1e327f6f975224b3b15fb1b4c41632fdf882e4af39c52e303507",
   "csp": {
     "present": true,
     "directives": {
@@ -54,7 +54,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "kit": {
@@ -64,7 +68,11 @@
       "store",
       "dialog",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "selfSerializing": false
