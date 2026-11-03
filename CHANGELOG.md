@@ -2,6 +2,10 @@
 
 Format: [SemVer](https://semver.org/lang/ro/) MAJOR.MINOR.PATCH.
 
+## 2.1.1 — 2026-11-03
+
+Peisaj sonor comun (FFF): mixer Web Audio cu straturi de zgomot/ploaie/valuri/vânt/drone/ton, profile dormit/studiu/preparat (presetări, fără afirmații de efect), oprire automată, export/import sound/profile și randare WAV; local, fără server.
+
 ## 2.1.0 — 2026-11-02 (reîmprospătare kit)
 
 - Nou (kit): **Sincronizare între dispozitive** (`FFF.sync`) — în dialogul «Transparență» (clic pe versiune → Copie de siguranță): conectezi două dispozitive direct (WebRTC, cod/QR, fără server și fără cont) și își schimbă datele aplicației; cea mai recentă valoare câștigă, secretele (chei API, parole) nu se trimit, ștergerile nu se propagă. Aplicarea trece prin importul kitului (confirmare, chei permise, rollback).
