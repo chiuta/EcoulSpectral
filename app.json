@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "ecoulspectral",
   "name": "Ecoul Spectral",
-  "version": "2.1.6",
-  "updated": "2026-11-11",
+  "version": "2.1.7",
+  "updated": "2026-11-13",
   "description": "Editor de spectrogramă offline: izolezi sau elimini regiuni timp–frecvență (STFT/ISTFT), pensulă spectrală, detecție de voce armonică, reducere de zgomot prin scădere spectrală, evenimente Mid/Side, fade/tăiere/normalizare, export WAV 16/24 biți. Fără cont. / Offline spectrogram editor: isolate or remove time–frequency regions (STFT/ISTFT), spectral brush, harmonic voice detection, spectral-subtraction noise reduction, Mid/Side events, fade/trim/normalize, 16/24-bit WAV export. No account.",
   "egress": [],
   "permissions": [
@@ -16,8 +16,8 @@
   "storageKeys": [
     "ecoulSpectral.settings.v1"
   ],
-  "sizeBytes": 807670,
-  "sha256": "773acfc48d5bf55c73c7a905363eb6cd318b851f8c68a76bce16b0760e770ebc",
+  "sizeBytes": 821247,
+  "sha256": "16ac3117df0adc73980c67c665aa7548ca6ab448a69fed1218b149a0bf360b40",
   "csp": {
     "present": true,
     "directives": {
@@ -58,6 +58,7 @@
       "dialog",
       "exit",
       "view",
+      "ux",
       "label",
       "bundle",
       "qr",
@@ -67,13 +68,14 @@
     ]
   },
   "kit": {
-    "version": "1.4.0",
+    "version": "1.5.0",
     "modules": [
       "core",
       "store",
       "dialog",
       "exit",
       "view",
+      "ux",
       "label",
       "bundle",
       "qr",
