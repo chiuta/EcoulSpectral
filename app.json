@@ -11,18 +11,19 @@
     "serviceWorker",
     "localStorage",
     "Web Crypto",
+    "WebGL",
     "BroadcastChannel"
   ],
   "storageKeys": [
     "ecoulSpectral.settings.v1"
   ],
-  "sizeBytes": 821247,
-  "sha256": "16ac3117df0adc73980c67c665aa7548ca6ab448a69fed1218b149a0bf360b40",
+  "sizeBytes": 872901,
+  "sha256": "4202a2e078078088457c3e4ef442532a0d2a6913eb969af9d700c1196b24da36",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×6",
+      "script-src": "sha256×7",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data: blob:",
       "media-src": "blob: data:",
